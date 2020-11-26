@@ -1,0 +1,5 @@
+ID,title,isRead,job_ID
+101,Identify the work zone by placing work area protection.,false,101
+102,Verify that the power line has been deenergized and visibly grounded with a certified cutout.,false,101
+103,Provide a dedicated spotter who is in continuous contact with the operator and ground,false,101
+104,For equipment with extendable booms: When the boom is in the fully extended position ensure that ground is still in contact with the cutout.,false,101
