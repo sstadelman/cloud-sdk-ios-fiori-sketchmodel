@@ -7,12 +7,26 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^4",
+    "@sap/hana-client": "^2.6.61",
+    "big": "^0.5.2",
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^5"
+    "sqlite": "^4.0.17",
+    "sqlite3": "^5.0.0"
   },
   "scripts": {
     "start": "npx cds run"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": "*",
+        "credentials": {
+          "database": "my.db"
+        }
+      }
+    }
   }
 }

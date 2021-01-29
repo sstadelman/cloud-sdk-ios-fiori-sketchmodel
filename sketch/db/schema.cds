@@ -25,20 +25,19 @@ entity Technicians: Persons {
 
 entity Jobs {
     key ID: Integer;
-    title: String;
-    number: String(15);
+    title: String not null;
+    number: String(15) not null;
     tags: String;
     description: String;
-    status: String(15);
-    priority: String(7);
+    status: String(15) not null default 'New';
+    priority: String(7) not null;
     technician: Association to Technicians;
     steps: Association to many JobSteps on steps.job = $self;
 }
 
-@cds.autoexpose
 entity JobSteps {
     key ID: Integer;
-    title: String;
-    isRead: Boolean;
+    title: String not null;
+    isRead: Boolean not null default false;
     job: Association to Jobs;
 }

@@ -5,7 +5,7 @@ GET http://localhost:4004/client
 GET http://localhost:4004/client/$metadata
 
 ### Browsing Books
-GET http://localhost:4004/client/Jobs?$expand=steps
+GET http://localhost:4004/client/Jobs?$expand=technician,steps
 
 ### Browsing Authors
 GET http://localhost:4004/client/JobStep?
@@ -13,3 +13,12 @@ GET http://localhost:4004/client/JobStep?
 # &$expand=books($select=title;$expand=currency)
 # &$filter=ID eq 101
 # &sap-language=de
+
+POST http://localhost:4004/client/JobStep
+Content-Type: application/json;IEEE754Compatible=true
+Authorization: Basic alice:
+
+{
+  "ID": 2,
+  "title": "Job step created from POSTMAN",
+}
